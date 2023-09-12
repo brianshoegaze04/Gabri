@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/relative_layout" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/linear" android:paddingLeft="10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="0dp" android:layout_marginRight="0dp" android:layout_marginBottom="0dp">
+            <LinearLayout android:orientation="vertical" android:paddingRight="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp">
+                <TextView android:textSize="20sp" android:textColor="@color/colorLogoBlack" android:id="@+id/amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0dp" android:text="1000"/>
+                <TextView android:id="@+id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0dp" android:text="7 Jan. 2019"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@+id/line_divider" android:background="#e2e2e2" android:visibility="visible" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_below="@+id/linear"/>
+    </RelativeLayout>
+</RelativeLayout>

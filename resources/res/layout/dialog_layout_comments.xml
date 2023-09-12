@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ScrollView android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="0dp">
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="0dp" android:layout_weight="1">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view_comments" android:paddingTop="5dp" android:paddingBottom="5dp" android:visibility="visible" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <ProgressBar android:layout_gravity="center" android:id="@+id/progressBar_comment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="50dp" android:layout_weight="1" style="?android:attr/progressBarStyle"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_nothing_comment" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="50dp">
+                <TextView android:textSize="20dp" android:textColor="@android:color/black" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:text="@string/no_review_at_the_moment"/>
+            </LinearLayout>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="right" android:orientation="horizontal" android:paddingLeft="30dp" android:paddingRight="30dp" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="3dp">
+                    <TextView android:textSize="15sp" android:textColor="@color/colorPrimaryDark" android:gravity="right" android:id="@+id/close_note" android:background="?android:attr/selectableItemBackground" android:paddingLeft="7dp" android:paddingTop="7dp" android:paddingRight="7dp" android:paddingBottom="7dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="@string/close"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

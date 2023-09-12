@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="0dp">
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="0dp" android:layout_weight="1">
+            <TextView android:textSize="20sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="15dp" android:paddingTop="30dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="0dp" android:text="@string/choose_a_favorite_ride" android:singleLine="true"/>
+            <RelativeLayout android:id="@+id/layout_liste" android:layout_width="match_parent" android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view_requetes" android:paddingTop="5dp" android:paddingBottom="5dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <ProgressBar android:id="@+id/progressBar_ride" android:visibility="gone" android:layout_width="25dp" android:layout_height="25dp" android:layout_margin="20dp" android:layout_centerInParent="true" android:indeterminateTint="@color/colorLogoBlack" style="?android:attr/progressBarStyle"/>
+                <TextView android:textColor="@color/colorBlack" android:gravity="center" android:id="@+id/nothing" android:paddingLeft="30dp" android:paddingRight="30dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_favorite_ride_at_the_moment" android:singleLine="true" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="right" android:orientation="horizontal" android:paddingLeft="30dp" android:paddingRight="30dp" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="3dp">
+                    <TextView android:textSize="15sp" android:textColor="@color/colorPrimaryDark" android:gravity="right" android:id="@+id/cancel" android:background="?android:attr/selectableItemBackground" android:paddingLeft="7dp" android:paddingTop="7dp" android:paddingRight="7dp" android:paddingBottom="7dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="@string/cancel"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

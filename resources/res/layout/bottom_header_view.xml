@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/bottom_sheet_header" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="18dp">
+        <TextView android:textSize="20sp" android:textColor="@color/colorPrimaryDark" android:ellipsize="end" android:id="@+id/text_view_place_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:maxLines="1" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+        <TextView android:textSize="16sp" android:textStyle="normal" android:textColor="@color/colorPrimary" android:ellipsize="end" android:id="@+id/text_view_place_address" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:maxLines="1" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+        <TextView android:textSize="12sp" android:textStyle="normal" android:textColor="@color/textGrey" android:ellipsize="end" android:id="@+id/text_view_place_coordinates" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLines="1" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/progress_bar_place" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:attr/progressBarStyle"/>
+</FrameLayout>

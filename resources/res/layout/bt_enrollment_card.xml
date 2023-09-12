@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <LinearLayout style="@style/bt_field_container">
+        <ImageView android:id="@+id/bt_sms_code_icon" style="@style/bt_card_form_icon"/>
+        <com.google.android.material.textfield.TextInputLayout android:paddingLeft="@dimen/bt_edit_text_icon_padding" android:paddingStart="@dimen/bt_edit_text_icon_padding" android:paddingEnd="0dp" android:labelFor="@+id/bt_sms_code" style="@style/bt_text_input_layout">
+            <com.braintreepayments.cardform.view.ErrorEditText android:id="@+id/bt_sms_code" android:hint="@string/bt_sms_code" android:inputType="number" android:contentDescription="@string/bt_sms_code" style="@style/bt_card_form_field"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <TextView android:id="@+id/bt_sms_sent_text" android:paddingLeft="58dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-8dp" android:text="@string/bt_sms_code_sent_to" android:paddingStart="58dp"/>
+    <com.braintreepayments.api.dropin.view.AnimatedButtonView android:id="@+id/bt_animated_button_view" android:paddingTop="32dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:bt_buttonText="@string/bt_confirm"/>
+    <Button android:textSize="6pt" android:textColor="@color/bt_text_blue" android:id="@+id/bt_sms_help_button" android:background="@android:color/transparent" android:paddingTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bt_use_a_different_phone_number" android:textAllCaps="true"/>
+</merge>

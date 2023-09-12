@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/relative_layout" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/linear" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0dp" android:layout_marginRight="5dp" android:layout_marginBottom="0dp">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.taxi.pe.cliente.circleimage.CircleImageView android:id="@+id/img_driver" android:paddingLeft="3dp" android:paddingTop="3dp" android:paddingRight="3dp" android:paddingBottom="3dp" android:layout_width="55dp" android:layout_height="55dp" android:src="@drawable/user_profile" app:civ_border_color="@color/colorPrimary" app:civ_border_width="2dp"/>
+            <com.taxi.pe.cliente.circleimage.CircleImageView android:layout_gravity="right" android:id="@+id/online" android:layout_width="13dp" android:layout_height="13dp" android:layout_margin="6dp" android:src="@drawable/ic_statut_on"/>
+            <ProgressBar android:layout_gravity="center" android:id="@+id/progressBar" android:layout_width="15dp" android:layout_height="15dp" style="?android:attr/progressBarStyle"/>
+        </FrameLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:id="@+id/img_rate" android:padding="2dp" android:layout_width="20dp" android:layout_height="match_parent" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_star"/>
+            <TextView android:textSize="12dp" android:gravity="right" android:id="@+id/driver_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4.7"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

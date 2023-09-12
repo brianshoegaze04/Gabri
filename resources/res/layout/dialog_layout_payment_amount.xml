@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="0dp" android:layout_weight="1">
+        <TextView android:textSize="20sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="30dp" android:paddingTop="30dp" android:paddingRight="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="0dp" android:text="@string/payment_amount" android:singleLine="true"/>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginTop="10dp" android:layout_marginRight="30dp">
+            <TextView android:textSize="25sp" android:id="@+id/devise" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$" android:inputType="number"/>
+            <TextView android:textSize="70sp" android:id="@+id/amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="42" android:inputType="number"/>
+        </LinearLayout>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp">
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:paddingLeft="0dp" android:paddingRight="30dp" android:paddingBottom="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp">
+                <TextView android:textSize="15sp" android:textColor="@color/colorPrimaryDark" android:gravity="right" android:id="@+id/payment_method" android:background="?android:attr/selectableItemBackground" android:paddingLeft="7dp" android:paddingTop="7dp" android:paddingRight="7dp" android:paddingBottom="7dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="@string/pay_now"/>
+                <TextView android:textSize="15sp" android:textColor="@color/colorPrimaryDark" android:gravity="right" android:id="@+id/cancel" android:background="?android:attr/selectableItemBackground" android:paddingLeft="7dp" android:paddingTop="7dp" android:paddingRight="7dp" android:paddingBottom="7dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="@string/cancel"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ScrollView android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="0dp">
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="0dp" android:layout_weight="1">
+            <TextView android:textSize="20sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="30dp" android:paddingTop="30dp" android:paddingRight="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="0dp" android:text="@string/modification_d_information" android:singleLine="true"/>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/intput_layout_numberplate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginRight="30dp">
+                <EditText android:textSize="16sp" android:id="@+id/input_edit_numberplate" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/number_plate" android:inputType="textPersonName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="right" android:orientation="horizontal" android:paddingLeft="30dp" android:paddingRight="30dp" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="3dp">
+                    <TextView android:textSize="15sp" android:textColor="@color/colorPrimaryDark" android:gravity="right" android:id="@+id/save_numberplate" android:background="?android:attr/selectableItemBackground" android:paddingLeft="7dp" android:paddingTop="7dp" android:paddingRight="7dp" android:paddingBottom="7dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="@string/enregistrer"/>
+                    <TextView android:textSize="15sp" android:textColor="@color/colorPrimaryDark" android:gravity="right" android:id="@+id/cancel_numberplate" android:background="?android:attr/selectableItemBackground" android:paddingLeft="7dp" android:paddingTop="7dp" android:paddingRight="7dp" android:paddingBottom="7dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="@string/cancel"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

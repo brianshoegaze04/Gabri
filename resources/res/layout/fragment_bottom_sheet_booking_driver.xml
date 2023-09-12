@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="right" android:id="@+id/cancel" android:padding="5dp" android:layout_width="30dp" android:layout_height="30dp" app:srcCompat="@drawable/quantum_ic_clear_grey600_24"/>
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/custom_cash" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="5dp">
+            <ImageView android:layout_gravity="right" android:padding="5dp" android:layout_width="match_parent" android:layout_height="55dp" android:tint="@color/colorYellowDark" android:layout_weight="3" app:srcCompat="@drawable/ic_payment_cash"/>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:textColor="@color/colorLogoBlack" android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/paiement_par_cash" android:singleLine="true"/>
+                <TextView android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/m_thode_de_paiement" android:singleLine="true"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="20sp" android:textColor="@color/colorLogoBlack" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="0dp" android:text="@string/choose_your_rider"/>
+        <View android:layout_gravity="center" android:id="@+id/line_divider_driver" android:background="@color/colorLogoBlack" android:visibility="gone" android:layout_width="70dp" android:layout_height="2dp" android:layout_below="@+id/linear"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="0dp" android:elevation="0dp">
+            <LinearLayout android:orientation="vertical" android:padding="0dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp" android:layout_marginBottom="10dp">
+                    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="3dp">
+                        <TextView android:textSize="16sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/choose_return_date_time"/>
+                        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                            <ImageView android:layout_gravity="center" android:layout_width="20dp" android:layout_height="20dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_time_outline"/>
+                            <TextView android:textSize="16sp" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/date_retour" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="0dp" android:text="" android:singleLine="true"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_weight="1">
+                            <ImageView android:layout_gravity="center" android:layout_width="20dp" android:layout_height="20dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_calendar"/>
+                            <TextView android:textSize="16sp" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/heure_retour" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="0dp" android:text="" android:singleLine="true"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@+id/switch_round" android:background="?android:attr/selectableItemBackground" android:padding="10dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="9" android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="0dp" android:elevation="0dp">
+            <LinearLayout android:orientation="vertical" android:padding="0dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="18sp" android:textColor="@color/colorLogoBlack" android:gravity="bottom" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginBottom="5dp" android:text="@string/m_thode_de_paiement" android:singleLine="true" android:layout_weight="1"/>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view_payment_method" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view_category_vehicle" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="5dp"/>
+            <TextView android:textSize="16sp" android:layout_gravity="center" android:id="@+id/nothing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="30dp" android:text="@string/no_drivers_yet"/>
+        </FrameLayout>
+        <View android:id="@+id/line_divider_detail" android:background="#e2e2e2" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:layout_below="@+id/linear"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/layout_driver_detail" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:orientation="vertical" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="0dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="100dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.5">
+                        <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                            <TextView android:textSize="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/brand_"/>
+                            <TextView android:textStyle="bold" android:id="@+id/vehicule_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mercedes"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="bottom|left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_weight="1">
+                            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                                <TextView android:textSize="10sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/model_"/>
+                                <TextView android:textStyle="bold" android:id="@+id/model_vehicule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3333333"/>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_weight="1">
+                                <TextView android:textSize="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/np_"/>
+                                <TextView android:textStyle="bold" android:id="@+id/numberplate_vehicule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="K 777 MA"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="100dp" android:layout_weight="0.6">
+                        <com.taxi.pe.cliente.circleimage.CircleImageView android:id="@+id/driver_image" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="2dp" app:civ_border_color="@color/colorPrimary" app:civ_border_width="2dp"/>
+                        <ProgressBar android:layout_gravity="center" android:id="@+id/progressBar" android:layout_width="15dp" android:layout_height="15dp" android:indeterminateTint="@color/colorLogoBlack" style="?android:attr/progressBarStyle"/>
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton android:textColor="@color/colorLogoBlack" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_phone" android:layout_weight="1" android:scaleX="0.7" android:scaleY="0.7" android:backgroundTint="@color/colorYellowDark" app:backgroundTint="@color/colorYellowDark" app:elevation="0dp" app:fabSize="1"/>
+                    </FrameLayout>
+                    <LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.5">
+                        <LinearLayout android:gravity="bottom|right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                            <TextView android:textSize="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/passenger_"/>
+                            <TextView android:textStyle="bold" android:id="@+id/passenger" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cash"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="bottom|right|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                            <LinearLayout android:gravity="bottom|right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                                <TextView android:textSize="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/duration_"/>
+                                <TextView android:textStyle="bold" android:id="@+id/duration_requete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15 mins"/>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:visibility="gone" android:layout_width="30dp" android:layout_height="wrap_content">
+                                    <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_money"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="bottom|right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                                    <TextView android:textSize="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cost_"/>
+                                    <TextView android:textStyle="bold" android:gravity="right" android:id="@+id/cout_requete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="230 $" android:singleLine="true"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton android:textColor="@color/colorLogoBlack" android:id="@+id/write" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chat" android:tint="@color/colorYellowDark" android:layout_weight="1" android:backgroundTint="@color/colorLogoBlack" app:backgroundTint="@color/colorLogoBlack" app:elevation="0dp" app:fabSize="0"/>
+                <TextView android:textSize="20sp" android:textColor="@color/colorLogoBlack" android:gravity="left" android:id="@+id/driver_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:layout_marginBottom="0dp" android:text="John Doe" android:layout_weight="3"/>
+                <TextView android:textSize="12dp" android:textStyle="bold" android:textColor="@color/colorLogoBlack" android:gravity="center" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/driver_rating" android:background="@drawable/custom_bg_statut_en_cours" android:padding="5dp" android:layout_width="60dp" android:layout_height="30dp" android:layout_marginBottom="0dp" android:text="4.7/5" android:drawableRight="@drawable/ic_eye" android:elevation="0dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="left" android:orientation="horizontal" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <TextView android:textColor="@color/colorLogoBlack" android:gravity="center" android:layout_gravity="center" android:id="@+id/commander" android:background="@drawable/custom_button" android:paddingLeft="15dp" android:paddingTop="5dp" android:paddingRight="15dp" android:paddingBottom="5dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="5dp" android:text="@string/book" android:cursorVisible="false" android:layout_weight="1" android:layout_centerHorizontal="true"/>
+            <TextView android:textColor="@color/colorWhite" android:gravity="center" android:id="@+id/book_later" android:background="@drawable/custom_button_second" android:paddingLeft="15dp" android:paddingTop="5dp" android:paddingRight="15dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="5dp" android:text="@string/book_later" android:layout_weight="1" android:layout_alignParentRight="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

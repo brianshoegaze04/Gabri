@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+        <RelativeLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_centerInParent="true">
+            <ImageView android:layout_width="@dimen/img_width_height" android:layout_height="@dimen/img_width_height" android:src="@drawable/intro_1"/>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="30dp" android:layout_weight="1" android:layout_centerInParent="true">
+            <TextView android:textSize="@dimen/slide_title" android:textStyle="bold" android:id="@+id/titre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reserve_a_taxi"/>
+            <TextView android:textSize="@dimen/slide_desc" android:id="@+id/message" android:paddingLeft="@dimen/desc_padding" android:paddingRight="@dimen/desc_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/create_an_account" android:textAlignment="center"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/custom_cash" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="5dp">
+            <ImageView android:layout_gravity="right" android:padding="5dp" android:layout_width="match_parent" android:layout_height="55dp" android:tint="@color/colorYellowDark" android:layout_weight="3" app:srcCompat="@drawable/ic_payment_cash"/>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:textColor="@color/colorLogoBlack" android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/paiement_par_cash" android:singleLine="true"/>
+                <TextView android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/m_thode_de_paiement" android:singleLine="true"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="20sp" android:textColor="@color/colorLogoBlack" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="20dp" android:text="@string/choose_your_vehicle_type"/>
+        <View android:layout_gravity="center" android:id="@+id/line_divider_driver" android:background="@color/colorLogoBlack" android:visibility="gone" android:layout_width="70dp" android:layout_height="2dp" android:layout_below="@+id/linear"/>
+        <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="150dp" android:layout_margin="10dp">
+            <ImageView android:id="@+id/trajet_ride" android:background="@drawable/custom_cash" android:padding="1.5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+            <ProgressBar android:id="@+id/progressBar_ride" android:layout_width="35dp" android:layout_height="35dp" android:layout_centerInParent="true" android:indeterminateTint="@color/colorLogoBlack" style="?android:attr/progressBarStyle"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_distance"/>
+                <TextView android:textSize="18sp" android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="7dp" android:text="@string/distance" android:singleLine="true" android:layout_weight="5"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:gravity="right" android:id="@+id/distance_requete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="7dp" android:text="" android:singleLine="true" android:layout_weight="5"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_weight="1">
+            <com.google.android.material.textfield.TextInputLayout android:theme="@style/TextLabel" android:id="@+id/intput_layout_place" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="0dp" android:layout_marginRight="0dp">
+                <EditText android:textSize="16sp" android:id="@+id/input_place" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/specify_exactly_your_location" android:drawableRight="@drawable/ic_location_pin_" android:inputType="textPersonName" android:drawableTint="@color/colorLogoBlack"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:theme="@style/TextLabel" android:id="@+id/intput_layout_people_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="0dp" android:layout_marginRight="0dp">
+                <EditText android:textSize="16sp" android:id="@+id/people_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/number_of_people" android:maxLength="2" android:drawableRight="@drawable/ic_team" android:inputType="number" android:drawableTint="@color/colorLogoBlack"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view_category_vehicle" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_marginBottom="5dp"/>
+            <ProgressBar android:id="@+id/progressBar" android:layout_width="35dp" android:layout_height="35dp" android:layout_margin="20dp" android:layout_centerInParent="true" android:indeterminateTint="@color/colorLogoBlack" style="?android:attr/progressBarStyle"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="5dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_time_outline"/>
+                <TextView android:textSize="18sp" android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="7dp" android:text="@string/dur_e" android:singleLine="true" android:layout_weight="5"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:gravity="right" android:id="@+id/duree_requete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="7dp" android:text="" android:singleLine="true" android:layout_weight="5"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="5dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_money"/>
+                <TextView android:textSize="18sp" android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="7dp" android:text="@string/co_t" android:singleLine="true" android:layout_weight="5"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="18sp" android:gravity="right" android:id="@+id/cout_requete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="7dp" android:text="" android:singleLine="true" android:layout_weight="5"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="left" android:orientation="horizontal" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <TextView android:textColor="@color/colorLogoBlack" android:gravity="center" android:layout_gravity="center" android:id="@+id/add_favorite" android:background="@drawable/custom_button" android:paddingLeft="15dp" android:paddingTop="5dp" android:paddingRight="15dp" android:paddingBottom="5dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="5dp" android:text="@string/add_to_favorite" android:cursorVisible="false" android:layout_weight="1" android:layout_centerHorizontal="true"/>
+            <TextView android:textColor="@color/colorWhite" android:gravity="center" android:id="@+id/cancel" android:background="@drawable/custom_button_second" android:paddingLeft="15dp" android:paddingTop="5dp" android:paddingRight="15dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="0dp" android:text="@string/cancel" android:layout_weight="1" android:layout_alignParentRight="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

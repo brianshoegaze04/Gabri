@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:icon="@drawable/bt_ic_camera_dark" android:id="@+id/bt_card_io_button" android:title="@string/bt_scan_with_card_io" app:showAsAction="always"/>
+</menu>

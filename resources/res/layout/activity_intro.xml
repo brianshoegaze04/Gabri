@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.viewpager.widget.ViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/layoutDots" android:layout_width="match_parent" android:layout_height="@dimen/dots_height" android:layout_marginBottom="@dimen/dots_margin_bottom" android:layout_alignTop="@+id/btn_next" android:layout_alignParentBottom="true"/>
+        <View android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="0dp" android:layout_above="@+id/layoutDots" android:alpha="0.5"/>
+        <Button android:id="@+id/btn_next" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/next" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+        <Button android:id="@+id/btn_skip" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/skip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

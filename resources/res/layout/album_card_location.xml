@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingLeft="10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/linear" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="0dp" android:layout_marginRight="5dp" android:layout_marginBottom="0dp">
+            <FrameLayout android:id="@+id/number_course" android:layout_width="70dp" android:layout_height="70dp" android:layout_alignParentLeft="true">
+                <ImageView android:id="@+id/img_vehicule" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+                <ProgressBar android:layout_gravity="center" android:id="@+id/progressBar" android:visibility="visible" android:layout_width="10dp" android:layout_height="10dp" android:layout_centerInParent="true" style="?android:attr/progressBarStyle"/>
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:paddingRight="0dp" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="10dp" android:layout_toRightOf="@+id/number_course" android:layout_centerInParent="true" android:layout_toEndOf="@+id/number_course">
+                <RelativeLayout android:gravity="bottom|left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="3.33">
+                    <TextView android:textSize="16sp" android:textStyle="normal" android:textColor="@color/colorBlack" android:id="@+id/nom_vehicule" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Range Rover" android:singleLine="true" android:layout_toLeftOf="@+id/layout_option" android:layout_toStartOf="@+id/layout_option"/>
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/layout_option" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+                        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="15dp" android:gravity="top" android:layout_gravity="top" android:id="@+id/moreOptions" android:paddingLeft="20dp" android:paddingRight="0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⋮" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout android:gravity="bottom|right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_weight="3.33">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="3.5">
+                        <TextView android:textSize="14sp" android:gravity="bottom|left|center_vertical|center_horizontal|center" android:id="@+id/prix_total" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="4dp" android:text="30.000 $" android:singleLine="true"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="bottom|right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="0dp" android:layout_weight="3.5">
+                        <TextView android:textSize="10sp" android:textColor="@color/colorLogoBlack" android:layout_gravity="bottom" android:id="@+id/statut_location" android:background="@drawable/custom_bg_statut_en_cours" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingBottom="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="En cours" android:layout_weight="0"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="bottom|right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="0dp" android:layout_weight="3">
+                        <TextView android:textSize="10dp" android:gravity="right" android:id="@+id/date" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="" android:singleLine="true"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/cancel" android:background="@drawable/custom_button_second" android:paddingLeft="10dp" android:paddingTop="0dp" android:paddingRight="10dp" android:paddingBottom="0dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:text="@string/cancel" android:cursorVisible="false" android:layout_weight="1"/>
+        <View android:id="@+id/line_divider" android:background="#e2e2e2" android:visibility="visible" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_below="@+id/linear"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="0dp" android:onClick="onBackgroundClicked">
+    <LinearLayout android:orientation="vertical" android:id="@+id/bt_dropin_bottom_sheet" android:background="@color/bt_base_background" android:layout_width="@dimen/bt_full_width" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:animateLayoutChanges="true" android:elevation="5dp">
+        <ViewSwitcher android:id="@+id/bt_loading_view_switcher" android:layout_width="match_parent" android:layout_height="wrap_content" android:measureAllChildren="false" android:animateLayoutChanges="true">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="120dp">
+                <ProgressBar android:layout_gravity="center" android:layout_width="@dimen/bt_progress_bar_diameter" android:layout_height="@dimen/bt_progress_bar_diameter" android:indeterminate="true"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+                <LinearLayout android:orientation="vertical" android:id="@+id/bt_vaulted_payment_methods_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+                    <RelativeLayout android:paddingTop="@dimen/bt_choose_existing_payment_label_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:theme="@style/bt_edit_button" android:id="@+id/bt_vault_edit_button" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bt_edit" android:layout_alignParentRight="true" android:onClick="onVaultEditButtonClick" android:layout_alignParentEnd="true" style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+                        <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="@string/bt_recent" android:layout_alignTop="@+id/bt_vault_edit_button" android:layout_alignBottom="@+id/bt_vault_edit_button" android:layout_alignParentLeft="true" android:layout_marginStart="20dp" android:layout_alignParentStart="true" style="@style/bt_choose_payment_label"/>
+                    </RelativeLayout>
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/bt_vaulted_payment_methods" android:paddingLeft="4dp" android:paddingRight="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <include layout="@layout/bt_section_divider"/>
+                </LinearLayout>
+                <TextView android:id="@+id/bt_supported_payment_methods_header" android:paddingTop="@dimen/bt_choose_new_payment_label_padding_top" android:paddingBottom="@dimen/bt_payment_label_padding_bottom" android:text="@string/bt_select_payment_method" style="@style/bt_choose_payment_label"/>
+                <ListView android:id="@+id/bt_supported_payment_methods" android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="@drawable/bt_list_view_divider" android:dividerHeight="1dp"/>
+            </LinearLayout>
+        </ViewSwitcher>
+    </LinearLayout>
+</RelativeLayout>

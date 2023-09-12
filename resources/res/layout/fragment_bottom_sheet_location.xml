@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="18sp" android:textColor="@color/colorBlack" android:paddingLeft="10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/information_sur_la_r_servation"/>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <TextView android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/total_payer" android:layout_weight="5"/>
+        <TextView android:textSize="20sp" android:textColor="@color/colorYellowDark" android:gravity="right" android:id="@+id/prix_reservation" android:paddingTop="0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="0"/>
+        <TextView android:textSize="20sp" android:textColor="@color/colorYellowDark" android:gravity="right" android:paddingTop="0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:text="$"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="10dp" android:paddingTop="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <TextView android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/nombre_de_jour" android:layout_weight="5"/>
+        <TextView android:textSize="20sp" android:textColor="@color/colorBlack" android:gravity="center" android:layout_gravity="right" android:id="@+id/nombre" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/layout_date_debut" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/date_d_but"/>
+            <TextView android:textSize="16sp" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/date_debut" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/layout_date_fin" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/date_fin"/>
+            <TextView android:textSize="16sp" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/date_fin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true"/>
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout android:theme="@style/TextLabel" android:id="@+id/input_layout_phone" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <EditText android:textSize="16sp" android:id="@+id/input_phone" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/contact" android:maxLength="12" android:inputType="phone"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout android:gravity="left" android:orientation="horizontal" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp">
+        <TextView android:textColor="@color/colorLogoBlack" android:gravity="center" android:layout_gravity="center" android:id="@+id/envoyer" android:background="@drawable/custom_button" android:paddingLeft="45dp" android:paddingRight="45dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="@string/envoyer" android:cursorVisible="false" android:layout_weight="5" android:layout_above="@+id/creer_compte" android:layout_centerHorizontal="true"/>
+        <TextView android:textColor="@color/colorWhite" android:gravity="center" android:id="@+id/annuler" android:background="@drawable/custom_button_second" android:paddingLeft="45dp" android:paddingRight="45dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/annuler" android:layout_weight="5" android:layout_alignParentRight="true"/>
+    </LinearLayout>
+</LinearLayout>

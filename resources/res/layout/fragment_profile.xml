@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+        <RelativeLayout android:layout_gravity="top|center_vertical|center_horizontal|center" android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp">
+            <RelativeLayout android:gravity="center" android:layout_width="175dp" android:layout_height="match_parent" android:layout_centerInParent="true">
+                <com.taxi.pe.cliente.circleimage.CircleImageView android:id="@+id/user_photo" android:layout_width="150dp" android:layout_height="150dp" android:src="@drawable/user_profile" android:layout_centerInParent="true" app:civ_border_color="@color/colorPrimary" app:civ_border_width="2dp"/>
+                <ProgressBar android:id="@+id/progressBar" android:visibility="gone" android:layout_width="30dp" android:layout_height="30dp" android:layout_centerInParent="true" style="?android:attr/progressBarStyle"/>
+                <RelativeLayout android:id="@+id/change_photo" android:background="?android:attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <ImageView android:background="@drawable/custom_button_like" android:padding="10dp" android:layout_width="35dp" android:layout_height="35dp" app:srcCompat="@drawable/ic_edit_black_24dp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:padding="17dp" android:layout_width="65dp" android:layout_height="65dp" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_profile_outline"/>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginRight="10dp">
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textSize="16sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/last_name" android:singleLine="true"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/input_nom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/edit_nom" android:padding="7dp" android:layout_width="35dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_edit_outline"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#e2e2e2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_below="@+id/linear"/>
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:padding="17dp" android:layout_width="65dp" android:layout_height="65dp" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_profile_outline"/>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginRight="10dp">
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textSize="16sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/first_name" android:singleLine="true"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/input_prenom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/edit_prenom" android:padding="7dp" android:layout_width="35dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_edit_outline"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#e2e2e2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_below="@+id/linear"/>
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:padding="17dp" android:layout_width="65dp" android:layout_height="65dp" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_phone_outline"/>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginRight="10dp">
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textSize="16sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_l_phone" android:singleLine="true"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/input_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/edit_phone" android:padding="7dp" android:layout_width="35dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_edit_outline"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#e2e2e2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_below="@+id/linear"/>
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:padding="17dp" android:layout_width="65dp" android:layout_height="65dp" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_message_outline"/>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginRight="10dp">
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textSize="16sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/email" android:singleLine="true"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/input_mail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/edit_mail" android:padding="7dp" android:layout_width="35dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_edit_outline"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#e2e2e2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_below="@+id/linear"/>
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:padding="17dp" android:layout_width="65dp" android:layout_height="65dp" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_password_outline"/>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginRight="10dp">
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textSize="16sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/mdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/password" android:singleLine="true"/>
+                    <TextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/input_mdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:inputType="textPassword"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/edit_mdp" android:padding="7dp" android:layout_width="35dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_edit_outline"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/layout_vehicle_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+            <TextView android:textSize="18sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:text="@string/vehicle_information" android:singleLine="true"/>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:padding="17dp" android:layout_width="65dp" android:layout_height="65dp" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_business_card"/>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginRight="10dp">
+                    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <TextView android:textSize="16sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/brand" android:singleLine="true"/>
+                        <TextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/input_brand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/edit_brand" android:padding="7dp" android:layout_width="35dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_edit_outline"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#e2e2e2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_below="@+id/linear"/>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:padding="17dp" android:layout_width="65dp" android:layout_height="65dp" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_business_card"/>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginRight="10dp">
+                    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <TextView android:textSize="16sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/model" android:singleLine="true"/>
+                        <TextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/input_model" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/edit_model" android:padding="7dp" android:layout_width="35dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_edit_outline"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#e2e2e2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_below="@+id/linear"/>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:padding="17dp" android:layout_width="65dp" android:layout_height="65dp" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_business_card"/>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginRight="10dp">
+                    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <TextView android:textSize="16sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/color" android:singleLine="true"/>
+                        <TextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/input_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/edit_color" android:padding="7dp" android:layout_width="35dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_edit_outline"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#e2e2e2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_below="@+id/linear"/>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:background="?android:attr/selectableItemBackground" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:padding="17dp" android:layout_width="65dp" android:layout_height="65dp" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_business_card"/>
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:padding="10dp" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginRight="10dp">
+                    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <TextView android:textSize="16sp" android:textColor="@color/colorBlack" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/number_plate" android:singleLine="true"/>
+                        <TextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/input_numberplate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/edit_numberplate" android:padding="7dp" android:layout_width="35dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:tint="@color/colorYellowDark" app:srcCompat="@drawable/ic_edit_outline"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#e2e2e2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_below="@+id/linear"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

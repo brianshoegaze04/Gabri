@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:clickable="true" android:layout_width="108dp" android:layout_height="141dp" android:layout_marginBottom="12dp" android:foreground="@drawable/bt_payment_method_list_item_bg" app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="4dp" app:cardElevation="4dp" app:cardPreventCornerOverlap="false" app:cardUseCompatPadding="true">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/bt_payment_method_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+        <TextView android:id="@+id/bt_payment_method_title" style="@style/bt_vaulted_payment_method_title"/>
+        <TextView android:textSize="12sp" android:textColor="@color/bt_black_54" android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@+id/bt_payment_method_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:maxLines="1" android:layoutDirection="ltr"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

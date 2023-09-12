@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewSwitcher android:id="@+id/bt_loading_view_switcher" android:background="@android:color/white" android:layout_width="@dimen/bt_full_width" android:layout_height="400dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <RelativeLayout android:id="@+id/bt_base_view" android:paddingTop="@dimen/bt_choose_existing_payment_label_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:theme="@style/bt_edit_button" android:id="@+id/bt_vault_manager_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bt_done" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+            <TextView android:gravity="center_vertical" android:id="@+id/bt_vault_manager_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bt_vault_manager_title" android:layout_alignTop="@+id/bt_vault_manager_close" android:layout_alignBottom="@+id/bt_vault_manager_close" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" style="@style/bt_choose_payment_label"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/bt_vault_manager_list" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/bt_vault_manager_title"/>
+        </RelativeLayout>
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </ViewSwitcher>
+</RelativeLayout>
